@@ -1,0 +1,23 @@
+<p>This is the partial for view 1.</p>
+
+<div ng-controller="Milestones">
+    
+    
+{{num_milestones}}
+
+<ul>
+   <li ng-repeat="milestone in milestones">
+       <form ng-submit="milestone.toggleDone()">
+       <input type="submit" value="{{milestone.buttonText()}}"/>
+       </form>
+       <div class="done-{{milestone.done_at==null}}"></div><span>{{milestone.text}}</span>
+       <span>
+           [{{milestone.timeLeft()}}s Left]
+       </span>
+   </li> 
+    
+</ul>
+
+lols
+    
+</div>
