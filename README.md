@@ -1,6 +1,6 @@
 #Yamma
 ###Yet Another Milestone Management App
-
+--------
 This is a simple client side angular.js app that aims to help developers get better at estimating how long stuff takes to code.
 
 It will let developers add milestones that are ascociated with a ceratin completion time. (entered as, ie 5pm or 3 hours from now)
