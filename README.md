@@ -1,5 +1,5 @@
 #Yamma
-##Yet Another Milestone Management App
+###Yet Another Milestone Management App
 
 This is a simple client side angular.js app that aims to help developers get better at estimating how long stuff takes to code.
 
