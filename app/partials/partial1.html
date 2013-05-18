@@ -1,23 +1,28 @@
-<p>This is the partial for view 1.</p>
 
-<div ng-controller="Milestones">
-    
-    
-{{num_milestones}}
 
-<ul>
-   <li ng-repeat="milestone in milestones">
-       <form ng-submit="milestone.toggleDone()">
-       <input type="submit" value="{{milestone.buttonText()}}"/>
-       </form>
-       <div class="done-{{milestone.done_at==null}}"></div><span>{{milestone.text}}</span>
-       <span>
-           [{{milestone.timeLeft()}}s Left]
-       </span>
-   </li> 
+<div id="content" ng-controller="Milestones">
+    <div id="shadow-left-outer"></div>
     
-</ul>
-
-lols
+    <ul id="task-list">
+        <li class="done-{{milestone.done_at==null}}" ng-repeat="milestone in milestones">
+            <div class="milestone-data">
+                
+                <span>{{milestone.text}}</span>
+                <span>
+                   [{{milestone.timeLeft()}}s Left]
+                </span>
+            </div>
+            <div class="controls">
+                <form ng-submit="milestone.toggleDone()">
+                <input type="submit" value="{{milestone.buttonText()}}"/>
+                </form>
+                
+            </div>
+        </li> 
+        
+    </ul>
     
+    lols
+    
+    <div id="shadow-left-inner"></div>
 </div>
