@@ -71,13 +71,12 @@ html,body{
     display: block;
     padding: 15px 12px;
     text-align: center;
-    min-width: 90px;
     min-height: 32px;
     background-color: #30A;
     border: 1px transparent solid;
     color: white;
     margin:0;
-    border-raduis: 0;
+    border-radius: 0;
     cursor: pointer;
     width: auto;
     font-size: 40px;

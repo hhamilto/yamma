@@ -4,6 +4,17 @@
     <div id="shadow-left-outer"></div>
     
     <ul id="task-list">
+        <li class="done-false">
+            <div class="milestone-data">
+                <form>
+                    <input id="time-estimate" placeholder="It will take this long..."/>
+                    <input id="time-estimate" placeholder="To Implment this..."/>
+                </form>
+            </div>
+            <div class="controls">
+                
+            </div>
+        </li>
         <li class="done-{{milestone.done_at==null}}" ng-repeat="milestone in milestones">
             <div class="milestone-data">
                 

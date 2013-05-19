@@ -5,48 +5,39 @@
 
 function Milestones($scope, $timeout){
     $scope.milestones = [
-        {text:"Finish the app", due_at: 1364125430, done_at: null, toggleDone: toggleDone,  buttonText:buttonText, done:done, timeLeft:timeLeft},
-        {text:"Go to Bed", due_at: 1364126430, done_at: null, toggleDone: toggleDone, buttonText:buttonText, done:done, timeLeft:timeLeft}
-        
+        {milestoneText:"Finish the app", timeDebt: 900, timePaid: 90, timeCost: null, done: false},
+        {milestoneText:"Go to Bed",  timeDebt: 900, timePaid: 0, timeCost: null, done: false}
     ];
     
+    $scope.working = true;
+    
     $scope.num_milestones = function(){
-        return 5;
-        
+        $scope.milestones.length();
     };
     
-    function toggleDone(){
-        if(!this.done()){
-            this.done_at = Math.round(new Date().getTime() / 1000);
-        }else{
-            this.done_at = null;
-        }
+    function toggleDone(milestone){
+        milestone.done = !milestone.done;
     }
     
-    function buttonText(){
-        if(this.done()){
-            return "JK";
+    function buttonText(milestone){
+        if(milestone.done){
+            return 'JK';
         }else{
             return 'DONE';
         }
     }
     
-    function done(){
-        return this.done_at != null;
-    }
-    
-    function timeLeft(arg){
-        console.log(arg);
-        return this.due_at - $scope.time;
-    }
-    
-    
     $timeout(function someWork(){
         $scope.time = Math.round(new Date().getTime() / 1000);
+        for(var i = 0; i < $scope.milestones.length() &&  $scope.working; i++){
+            $scope.milestones[i].timePaid++;
+        }
         $timeout(someWork, 1000);
     },1000);
     
-    
+    $scope.addMilestone = function(arg){
+        alert(arg);
+    };
 }
 
 function MyCtrl2() {
