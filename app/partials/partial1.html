@@ -2,30 +2,29 @@
 
 <div id="content" ng-controller="Milestones">
     <div id="shadow-left-outer"></div>
-    
+    <div class="done-false add-new-form">
+        <div class="milestone-data">
+            <form>
+                <input id="time-estimate" placeholder="It will take this long..."/>
+                <input id="time-estimate" placeholder="To Implment this..."/>
+            </form>
+        </div>
+        <div class="controls">
+            
+        </div>
+    </div>
     <ul id="task-list">
-        <li class="done-false">
-            <div class="milestone-data">
-                <form>
-                    <input id="time-estimate" placeholder="It will take this long..."/>
-                    <input id="time-estimate" placeholder="To Implment this..."/>
-                </form>
-            </div>
-            <div class="controls">
-                
-            </div>
-        </li>
-        <li class="done-{{milestone.done_at==null}}" ng-repeat="milestone in milestones">
+        <li class="done-{{milestone.done}}" ng-repeat="milestone in milestones">
             <div class="milestone-data">
                 
-                <span>{{milestone.text}}</span>
+                <span class="time-left">{{timeText(milestone)}}</span>
                 <span>
-                   [{{milestone.timeLeft()}}s Left]
+                  
                 </span>
             </div>
             <div class="controls">
                 <div class="controls-inner">
-                    <a class="yamma-button" ><i class="icon-ok icon-white"></i>{{milestone.buttonText()}}</a>
+                    <a class="yamma-button" ><i class="{{icon(milestone)}} icon-white"></i></a>
                 </div>
             </div>
         </li> 
