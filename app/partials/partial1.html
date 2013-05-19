@@ -13,10 +13,9 @@
                 </span>
             </div>
             <div class="controls">
-                <form ng-submit="milestone.toggleDone()">
-                <input type="submit" value="{{milestone.buttonText()}}"/>
-                </form>
-                
+                <div class="controls-inner">
+                    <a class="yamma-button" ><i class="icon-ok icon-white"></i>{{milestone.buttonText()}}</a>
+                </div>
             </div>
         </li> 
         

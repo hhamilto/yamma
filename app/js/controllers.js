@@ -25,9 +25,9 @@ function Milestones($scope, $timeout){
     
     function buttonText(){
         if(this.done()){
-            return "Just Kidding...";
+            return "JK";
         }else{
-            return "Done";
+            return 'DONE';
         }
     }
     

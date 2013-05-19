@@ -59,6 +59,39 @@ html,body{
     width:20%;
 }
 
+
+#task-list li .controls-inner{
+    padding:10px;
+}
+
+.yamma-button{
+    font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-smooth: always;
+    display: block;
+    padding: 15px 12px;
+    text-align: center;
+    min-width: 90px;
+    min-height: 32px;
+    background-color: #30A;
+    border: 1px transparent solid;
+    color: white;
+    margin:0;
+    border-raduis: 0;
+    cursor: pointer;
+    width: auto;
+    font-size: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+.yamma-button:hover{
+    background-color: #52C;
+    color: white;
+    text-decoration:none;
+}
+
 /********* MILESTONE DATA ********/
 
 #task-list li .milestone-data{
