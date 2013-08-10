@@ -4,27 +4,29 @@
     <div id="shadow-left-outer"></div>
     <div class="done-false add-new-form">
         <div class="milestone-data">
-            <form>
-                <input id="time-estimate" placeholder="It will take this long..."/>
-                <input id="time-estimate" placeholder="To Implment this..."/>
+            <form ng-submit="addMilestone()">
+                <input id="timeDebtEstimate" ng-model="timeDebtEstimate" placeholder="It will take this long..."/>
+                <input id="description" ng-model="description"  placeholder="To Implment this..."/>
+                <button class="btn"><i class="icon-plus-sign"></i></button>
             </form>
+            <input id="username" ng-model="username" placeholder="Enter Username"/>
         </div>
-        <div class="controls">
+        <div class="">
             
         </div>
     </div>
     <ul id="task-list">
-        <li class="done-{{milestone.done}}" ng-repeat="milestone in milestones">
+        <li class="done-{{milestone.done}}" ng-repeat="milestone in MilestoneService.milestones">
             <div class="milestone-data">
                 
-                <span class="time-left">{{timeText(milestone)}}</span>
+                <span class="time-left">{{MilestoneService.timeText(milestone)}}</span>
                 <span>
-                  
+                  {{milestone.description}}
                 </span>
             </div>
             <div class="controls">
                 <div class="controls-inner">
-                    <a class="yamma-button" ><i class="{{icon(milestone)}} icon-white"></i></a>
+                    <a class="yamma-button" ng-click="MilestoneService.toggleDone(milestone)"><i class=" icon-white"></i></a>
                 </div>
             </div>
         </li> 

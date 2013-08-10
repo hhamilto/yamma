@@ -57,11 +57,14 @@ html,body{
     background:#666;
     height:200px;
     width:15%;
+    position:relative;
 }
 
 
 #task-list li .controls-inner{
     padding:10px;
+    height:100%;
+    position:relative;
 }
 
 .yamma-button{
@@ -83,6 +86,8 @@ html,body{
     line-height: 40px;
     box-sizing: border-box;
     text-decoration:none;
+    height: 50% !important;
+    position: relative;
 }
 
 .yamma-button:hover{
@@ -99,7 +104,7 @@ html,body{
 }
 
 #task-list li.done-true{
-    border-top: 15px solid purple;
+    border-top: 15px solid #30A;
 }
 
 #task-list li.done-false{
